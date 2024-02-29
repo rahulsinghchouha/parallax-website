@@ -1,0 +1,108 @@
+*{
+    /* padding and margin is 0 for all */
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+.wrapper{
+    height:100vh;  /*for all height */
+    overflow-y: auto; /*for down scroll */
+    overflow-x: hidden; /* horizental nhi swap krega */
+/* for enable the 3D */
+    perspective: 10px;
+}
+.container{
+    position:relative;
+    /* for over lap the image*/
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* for center image and text */
+    transform-style: preserve-3d;
+    /* for enable all 3D style */
+    z-index: -1;
+
+}
+.background,.foreground{
+    /* for 100%sizing */
+    position: absolute; 
+
+    height:100vh;
+    width:100vw;
+/* overlap both image */
+   object-fit: cover;    
+   z-index:-1;
+}
+.background{
+transform: translateZ(-39px) scale(5);
+}
+
+.foreground{
+transform: translateZ(-20px) scale(3);
+
+}  
+h1{ 
+/* given by user */
+    position:absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size:10rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+/* apply css property on all boxes */
+section{
+    background-color: rgb(45, 45,45);
+    color: white;
+    padding: 5rem;
+}
+/* given by user */
+.secHeading{
+    font-size: 3rem;
+    padding: 0 7rem;
+}
+.text{
+    font-size: 1rem;
+    padding: 0 5rem;
+    margin: 2rem 0;
+}
+/* for set the image */
+.bg{
+    position:relative;
+    width: 100vw;
+     background-attachment: fixed; 
+    background-size: cover;  
+    background-position: center;
+    height: 500px;
+}
+.desc{
+position: absolute;
+background-color: white;
+color: black;
+top: 50%;
+left: 50%;
+transform: translateX(-50%);
+padding: 0.5 2.5rem;
+font-size: 2.5rem;
+font-weight: 600;
+
+
+
+}
+/* one more way to add image */
+.bg1{
+    background-image: url(sport-1.jpg);
+    }
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+.bg4{
+    background-image: url(boxing.jpg);
+}
